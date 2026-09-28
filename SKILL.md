@@ -106,9 +106,10 @@ retry = 5
 该命令需要从 Github 等位置拉取代码，所以需要编译前的临时设置镜像站
 
 ```powershell
-# 编译前临时设置
+# 编译前临时设置：把 $mirror 换成实际可用的镜像站（例如下方 ghproxy.com）
+$mirror = "https://ghproxy.com/"
 $env:GIT_CONFIG_COUNT = "1"
-$env:GIT_CONFIG_KEY_0 = "url.https://example.com/https://github.com/.insteadOf"
+$env:GIT_CONFIG_KEY_0 = "url.$($mirror)https://github.com/.insteadOf"
 $env:GIT_CONFIG_VALUE_0 = "https://github.com/"
 cargo check
 # ⚠⚠⚠ 用完立即清除 ⚠⚠⚠
@@ -116,7 +117,7 @@ Remove-Item Env:GIT_CONFIG_COUNT
 Remove-Item Env:GIT_CONFIG_KEY_0
 Remove-Item Env:GIT_CONFIG_VALUE_0
 ```
-（`https://example.com/`应该是镜像站地址）
+（把 `$mirror` 换成自己可用的镜像站即可，例如 `https://ghproxy.com/`、`https://v4.gh-proxy.org/` 等；注意此处是临时环境变量，不会改变全局 git 配置）
 
 ## vcpkg
 需要配置 GitHub 下载代理
