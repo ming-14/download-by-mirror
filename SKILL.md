@@ -1,6 +1,14 @@
 ---
 name: download-by-mirror
-description: "Used when downloading resources from **GitHub**, **npm/pnpm**, **pip**, **WinGet**, **apt**, **DockerHub**, **Maven**, **Cargo**, **Hugging Face**, **nuget** and others, to obtain information on how to use mirror sources under network-restricted conditions. 1. 从Github下载Release资源，clone仓库 2. 使用npm安装依赖、安装软件包 3. 使用pip安装依赖 4. 使用winget、apt安装软件包 5. 使用cargo安装依赖 6. 从huggingface下载资源 7. 使用开源镜像下载常见仓库"
+description: |
+  Used when downloading resources from **GitHub**, **npm/pnpm**, **pip**, **WinGet**, **apt**, **DockerHub**, **Maven**, **Cargo**, **Hugging Face**, **nuget** and others, to obtain information on how to use mirror sources under network-restricted conditions.
+  1. 从Github下载Release资源，clone仓库
+  2. 使用npm安装依赖、安装软件包
+  3. 使用pip安装依赖
+  4. 使用winget、apt安装软件包
+  5. 使用cargo安装依赖
+  6. 从huggingface下载资源
+  7. 使用开源镜像下载常见仓库、资源，如Linux、AOSP
 ---
 
 由于中国大陆网络问题，请使用镜像站下载所有可能无法访问的资源
@@ -32,6 +40,10 @@ description: "Used when downloading resources from **GitHub**, **npm/pnpm**, **p
 - https://getgit.love8yun.eu.org/
 - https://github.chenc.dev/
 - https://gh.shiina-rimo.cafe/
+- https://github.ednovas.xyz/
+- https://gh.jasonzeng.dev/
+- https://wget.la/
+- https://git.yylx.win/
 
 例子：`https://v4.gh-proxy.org/https://github.com/{user}/{repo}/archive/refs/tags/{tag}.zip` — 下载源码包
 
