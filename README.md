@@ -13,7 +13,7 @@
 
 本 Skill 同时给出了「**用什么镜像**」和「**怎么安全地用**」
 
-## 安装
+## 安装 🎉
 
 ```bash
 npx skills add https://github.com/ming-14/download-by-mirror-skill -y
